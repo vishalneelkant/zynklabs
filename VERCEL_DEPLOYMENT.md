@@ -52,6 +52,7 @@ Output Directory: dist
 Install Command: npm install
 ```
 
+
 **Important:** Make sure **Root Directory** is set to `frontend` since your React app is in the `frontend/` folder.
 
 ### Step 4: Add Environment Variables
