@@ -1,0 +1,18 @@
+package com.zynklabs.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+import java.util.UUID;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class BookDemoResponse {
+    private boolean success;
+    private UUID id;
+    private LocalDate scheduledAt;
+}
+
