@@ -8,7 +8,7 @@ interface SolutionCardProps {
   index: number;
 }
 
-const SolutionCard = ({ icon, title, description, color, index }: SolutionCardProps) => {
+const SolutionCard = ({ icon, title, description, color }: SolutionCardProps) => {
   // Convert hex to RGB for glow effect
   const hexToRgb = (hex: string) => {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
