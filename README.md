@@ -38,9 +38,38 @@ A premium AI automation website with a CRED-style UI, built with React (frontend
 - Node.js 18+ and npm
 - Java 17 or 21
 - Maven 3.6+
+- Docker and Docker Compose (optional, for containerized development)
 
-### Frontend Setup
+### Option 1: Using npm scripts (Recommended)
 
+```bash
+# Install all dependencies
+npm run setup
+
+# Start both backend and frontend
+npm run dev
+```
+
+### Option 2: Using Make
+
+```bash
+# Install all dependencies
+make setup
+
+# Start both services
+make dev
+```
+
+### Option 3: Using Docker Compose
+
+```bash
+# Start all services (backend, frontend, PostgreSQL)
+docker-compose up
+```
+
+### Option 4: Individual Setup
+
+**Frontend:**
 ```bash
 cd frontend
 npm install
@@ -48,18 +77,17 @@ cp .env.example .env
 # Edit .env and set VITE_API_BASE_URL=http://localhost:8080
 npm run dev
 ```
-
 Frontend runs on `http://localhost:5173`
 
-### Backend Setup
-
+**Backend:**
 ```bash
 cd backend
 mvn clean install
 mvn spring-boot:run
 ```
-
 Backend runs on `http://localhost:8080`
+
+> 📖 For detailed development instructions, see [DEVELOPMENT.md](./DEVELOPMENT.md)
 
 ## Environment Variables
 

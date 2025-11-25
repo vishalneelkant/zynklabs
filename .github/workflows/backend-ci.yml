@@ -1,0 +1,41 @@
+name: Backend CI
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - 'backend/**'
+      - '.github/workflows/backend-ci.yml'
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - 'backend/**'
+      - '.github/workflows/backend-ci.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+      
+      - name: Build with Maven
+        working-directory: ./backend
+        run: mvn clean compile
+      
+      - name: Run tests
+        working-directory: ./backend
+        run: mvn test
+      
+      - name: Package application
+        working-directory: ./backend
+        run: mvn package -DskipTests
+

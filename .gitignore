@@ -1,52 +1,149 @@
+# ============================================
+# Monorepo - Zynk Labs
+# ============================================
+
 # Dependencies
 node_modules/
 .pnp
 .pnp.js
+.pnp.*
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
 
 # Testing
 coverage/
 *.lcov
+.nyc_output/
+test-results/
+playwright-report/
 
-# Production
+# Production Builds
 build/
 dist/
-*.log
-
-# Misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
-.project
-.classpath
-.settings/
-*.iml
-
-# Java
-*.class
-*.jar
-*.war
-*.ear
-target/
-.mvn/
-mvnw
-mvnw.cmd
-
-# Spring Boot
-application-local.properties
+.vite/
+out/
 
 # Logs
 logs/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
 
-# OS
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# IDE - VSCode
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# IDE - IntelliJ / Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# IDE - Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# IDE - NetBeans
+nbproject/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# IDE - Vim
+*.swp
+*.swo
+*~
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# IDE - Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Java / Maven
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+target/
+.mvn/
+mvnw
+mvnw.cmd
+.mvn/wrapper/maven-wrapper.jar
+
+# Spring Boot
+application-local.properties
+application-*.properties
+!application.properties
+!application-prod.properties
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Railway / Vercel
+.railway/
+.vercel/
+
+# Misc
+*.pid
+*.seed
+*.pid.lock
+.cache/
+.turbo/
+.next/
+.nuxt/
+.vuepress/dist/
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+.vscode-test/
 
